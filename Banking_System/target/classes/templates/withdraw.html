@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="https://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Student Page</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+	<div class="container" align="center">
+		<h2>WTIHDRAW AMOUNT</h2>
+		<hr>
+		<br>
+		<form action="#" method="post">
+			<input type="hidden" name="id" th:value="${bank.id}" />
+			
+			<div class="form-group">
+				<label for="currentAmount">Current Amount:</label>
+				<input type="text" id="currentAmount" class="form-control" th:value="${bank.amount}" readonly />
+			</div>
+			<div class="form-group">
+			    <label for="withdraw">Withdraw Amount:</label>
+			    <input type="number" id="withdrawamount" name="amount" class="form-control" placeholder="Enter amount to Withdraw" autocomplete="off" required />
+			</div>
+			
+			
+		<button type="submit" class="btn btn-info col-2">WITHDRAW</button>
+		</form>
+		<br>
+		<a th:href="@{/}" class="btn btn-primary btn-sm mb-3">
+						Back To List
+					</a>
+
+	</div>
+</body>
+
+</html>

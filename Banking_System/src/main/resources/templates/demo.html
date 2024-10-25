@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="https://www.thymeleaf.org">
+<meta charset="UTF-8">
+<title>Student Page</title>
+
+<style>
+</style>
+
+<body>
+	<h1 th:text = "#{demo.hi}"> Message </h1>
+
+	<div class="container" align="center">
+		<h1>Student Details As Follows</h1>
+		<h1 th:text="${bank.id}"></h1>
+		<h1 th:text="${bank.name}"></h1>
+		<div th:object="${bank}">
+			<h1> The value is accessed through selection tag</h1>
+			<h3>
+			<br><span th:text="*{id}">Id</span>
+			<br><span th:text="*{name}">Id</span>
+			</h3>
+
+		
+	</div>
+	
+
+</body>
+
+</html>
